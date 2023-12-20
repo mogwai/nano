@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano"
+description = "A starting place for a nano torch repo"
+version = "0.0.1"
+dependencies = [
+    "numpy",
+    "torch==2.1.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "gradio",
+    "ipywidgets",
+    "isort",
+    "jupyterlab",
+    "mypy",
+    "pip-tools",
+    "pre-commit",
+    "pylint",
+    "pytest",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[project.scripts]
+train = "nano.train:main"
+
+[tool.black]
+line-length = 119
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*", "*_test"]
