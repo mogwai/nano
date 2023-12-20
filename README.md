@@ -4,13 +4,13 @@ A blueprint for torch model training with simple easy to understand structure an
 
 Great for hacking on new ideas quickly and maintaining
 
-# Guidelines
+# Keep it Simple Guidelines:
 
 - Put related things in one file
 - functions over classes
-- Keep it simple
 - Keep the package dependencies low, copy and paste things (adding source links) is fine
-
+- Lock dependencies
+- Bleeding edge is ok if needed.
 
 # Installing (Debian Based)
 
